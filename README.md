@@ -11,5 +11,19 @@ The repo also contains:
 
 The code was developed in 2010. 
 
-
-
+- Linux
+```
+git clone https://github.com/yehyunsuh/bone-segmentation.git
+mkdir tmp
+mkdir output
+cd bone-segmentation/
+cd src/proposed-method/
+mkdir build
+cd build/
+sudo apt install cmake
+sudo apt update
+sudo apt install libinsighttoolkit4-dev
+cmake ../src
+make
+./SegmentBoneFromCT ../../../sample-volumes/001-CT.nii ../../../tmp ../../../output/001-CT.nii
+```
